@@ -1,0 +1,24 @@
+# Dependency directories
+/node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Built output
+/dist/
+/build/
+
+# Testing files
+/coverage/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# macOS-specific files
+.DS_Store
+

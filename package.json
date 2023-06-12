@@ -1,0 +1,22 @@
+{
+  "name": "tetris_server",
+  "version": "1.0.0",
+  "description": "red tetris server side",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/beeguy74/tetris_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beeguy74/tetris_server/issues"
+  },
+  "homepage": "https://github.com/beeguy74/tetris_server#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
