@@ -8,7 +8,6 @@ const initApp = (app, params, cb) => {
   const {host, port} = params
   const handler = (req, res) => {
     const file = req.url === '/bundle.js' ? '/../build/bundle.js' : '/../client/index.html'
-    console.log("FILE!", file)
     fs.readFile(__dirname + file, (err, data) => {
       if (err) {
         logerror(err)
