@@ -7,6 +7,8 @@ class SocketServer {
   };
 
   start(){
+    this.io.listen(3001);
+    console.log('sockets started')
     this.io.on('connection', (socket) => {
       console.log('user connected');
     });
