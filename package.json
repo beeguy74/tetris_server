@@ -4,7 +4,8 @@
   "description": "red tetris server side",
   "private": "true",
   "scripts": {
-    "start": "nodemon --exec babel-node ./server/main.js",
+    "start": "nodemon ./server/main.js",
+    "dev": "webpack --mode development && nodemon server/main.js",
     "build": "webpack",
     "test": "echo \"Error: no test specified\""
   },
