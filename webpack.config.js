@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "client/src", "main.jsx"),
+  watch: true,
   module: {
     rules: [
       {
