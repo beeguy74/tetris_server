@@ -1,6 +1,6 @@
 .div-login {
   border-radius: 16px;
-  background-color: #f0d792;
+  background-color: rgb(112, 166, 200, 0.7);
   padding: 30px;
   max-width: 40vw;
   margin-top: 40vh;
@@ -18,12 +18,13 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #a3c2d4;
   
 }
 
 .input[type='submit'] {
   width: 100%;
-  background-color: #4caf50;
+  background-color: rgb(228, 138, 91, 0.6);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -33,5 +34,5 @@
 }
 
 .input[type='submit']:hover {
-  background-color: #45a049;
+  background-color: rgba(224, 116, 58, 0.6);
 }

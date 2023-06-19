@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #bd5f15;
+  background-color: #0f3664;
 }
 .container {
   /* display: flex; */
@@ -46,13 +46,13 @@
   display: inline;
   font-size: 16px;
   font-weight: 500;
-  color: #2f234f;
+  color: #70a6c8;
   text-decoration: none;
   cursor: pointer;
 }
 
 .nav-elements ul a {
-  color: #2f234f;
+  color: #70a6c8;
   text-decoration: none;
 }
 
