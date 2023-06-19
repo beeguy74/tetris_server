@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.navbar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #bd5f15;
+}
+.container {
+  /* display: flex; */
+  align-items: center;
+  width: 100vw;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.nav-elements-main {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+.nav-elements-auth {
+  float: right;
+  display: flex;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.nav-elements {
+  /* border: solid; */
+  display: block;
+  align-items: center;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li {
+  margin-right: 60px;
+  display: inline;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2f234f;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-elements ul a {
+  color: #2f234f;
+  text-decoration: none;
+}
+
+/* .nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+} */
+
+/* .nav-elements li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+} */
