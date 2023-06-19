@@ -1,26 +1,22 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { openForm } from './loginFormSlice';
-import './ButtonStart.css';
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import { openForm } from "./loginFormSlice";
+import "./ButtonStart.css";
 
 const ButtonStart = () => {
   const dispatch = useDispatch();
   const loginForm = useSelector((state) => state.loginForm.isOpen);
   const homePage = useSelector((state) => state.homePage.isOpen);
+  const navigate = useNavigate();
 
   console.log(loginForm);
 
   return (
     <>
-      {loginForm === false && homePage === false ? (
-        <button
-          className="button-start"
-          onClick={() => dispatch(openForm(true))}
-        >
-          Let's start
-        </button>
-      ) : (
-        <></>
-      )}{' '}
+      <button className="button-start" onClick={() => navigate("/login")}>
+        Let's start
+      </button>
     </>
   );
 };

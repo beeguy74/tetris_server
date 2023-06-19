@@ -17,36 +17,37 @@ const LoginForm = () => {
   const navigate = useNavigate();
   return (
     <>
-      {loginForm === true ? (
-        <div className="div-login">
-          <form autoComplete="off">
-            <label>
-              Your login:{" "}
-              <input
-                className="input"
-                type="text"
-                name="Login"
-                onChange={(e) => dispatch(inputLogin(e.target.value))}
-              />
-            </label>
-            <button
+      <div className="div-login">
+        <form autoComplete="off">
+          <label>
+            Your login:{" "}
+            <input
               className="input"
-              type="submit"
-              onClick={() => {
-                dispatch(openHomePage(true));
-                dispatch(openForm(false));
-                navigate("/home");
-              }}
-              value="Submit"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+              type="text"
+              name="Login"
+              onChange={(e) => dispatch(inputLogin(e.target.value))}
+            />
+          </label>
+          <button
+            className="input"
+            type="submit"
+            onClick={() => {
+              // dispatch(openHomePage(true));
+              dispatch(openForm(false));
+              navigate("/home");
+            }}
+            value="Submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      {/* {loginForm === true ? (
+        
       ) : (
         <></>
       )}
-      {homePage === true ? <HomePage /> : <></>}
+      {homePage === true ? <HomePage /> : <></>} */}
     </>
   );
 };
