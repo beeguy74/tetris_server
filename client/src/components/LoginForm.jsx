@@ -1,27 +1,28 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { openForm } from './loginFormSlice';
-import { openHomePage } from './homePageSlice';
-import HomePage from './HomePage';
-
-import './LoginForm.css';
-import { inputLogin } from './inputLoginSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { openForm } from "./loginFormSlice";
+import { openHomePage } from "./homePageSlice";
+import HomePage from "./HomePage";
+import { useNavigate } from "react-router-dom";
+import "./LoginForm.css";
+import { inputLogin } from "./inputLoginSlice";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
   const loginForm = useSelector((state) => state.loginForm.isOpen);
   const homePage = useSelector((state) => state.homePage.isOpen);
   const inputKey = useSelector((state) => state.inputLogin.input);
-  console.log(inputKey)
+  console.log(inputKey);
   console.log(`homePage: ${homePage}`);
+
+  const navigate = useNavigate();
   return (
     <>
       {loginForm === true ? (
         <div className="div-login">
-          <form  autoComplete="off">
+          <form autoComplete="off">
             <label>
-              Your login:{' '}
+              Your login:{" "}
               <input
-              
                 className="input"
                 type="text"
                 name="Login"
@@ -34,6 +35,7 @@ const LoginForm = () => {
               onClick={() => {
                 dispatch(openHomePage(true));
                 dispatch(openForm(false));
+                navigate("/home");
               }}
               value="Submit"
             >
