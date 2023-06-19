@@ -6,7 +6,8 @@
   "scripts": {
     "start-dev": "webpack-dev-server --open",
     "start": "nodemon ./server/main.js",
-    "dev": "webpack --mode development && nodemon server/main.js",
+    "__dev": "webpack --mode development --watch && nodemon server/main.js",
+    "dev": "concurrently \"npx webpack --mode development --watch\" \"nodemon server/main.js\"",
     "build": "webpack",
     "test": "echo \"Error: no test specified\""
   },
@@ -37,6 +38,7 @@
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "babel-loader": "^9.1.2",
+    "concurrently": "^8.2.0",
     "css-loader": "^6.8.1",
     "debug": "^4.3.4",
     "eslint": "^8.38.0",
