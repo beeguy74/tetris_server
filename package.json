@@ -4,6 +4,7 @@
   "description": "red tetris server side",
   "private": "true",
   "scripts": {
+    "start-dev": "webpack-dev-server --open",
     "start": "nodemon ./server/main.js",
     "__dev": "webpack --mode development --watch && nodemon server/main.js",
     "dev": "concurrently \"npx webpack --mode development --watch\" \"nodemon server/main.js\"",
@@ -51,6 +52,7 @@
     "socket.io": "^4.6.2",
     "style-loader": "^3.3.3",
     "webpack": "^5.87.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
