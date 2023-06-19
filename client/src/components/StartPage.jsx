@@ -7,7 +7,6 @@ const StartPage = () => {
   return (
     <div>
       <ButtonStart />
-      <LoginForm />
     </div>
   );
 };
