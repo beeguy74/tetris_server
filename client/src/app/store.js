@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import loginFormReducer from '../components/loginFormSlice';
-import inputLoginReducer from '../components/inputLoginSlice';
-import homePageReducer from '../components/homePageSlice';
-import whichGameReducer from '../components/whichGameSlice';
+import loginFormReducer from '../components/slices/loginFormSlice';
+import inputLoginReducer from '../components/slices/inputLoginSlice';
+import homePageReducer from '../components/slices/homePageSlice';
+import whichGameReducer from '../components/slices/whichGameSlice';
 
 export const store = configureStore({
   reducer: {
