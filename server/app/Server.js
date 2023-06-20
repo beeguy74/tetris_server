@@ -1,4 +1,6 @@
 const express = require('express');
+//express middleware alows serve SSR with routing
+const fallback = require('express-history-api-fallback'); 
 
 
 class Server {
@@ -15,12 +17,7 @@ class Server {
       bar: 'foo'
     };
     this.app.use(express.static(DIST_DIR));
-    this.app.get('/api', (req, res) => {
-      res.send(mockResponse);
-    });
-    this.app.get('/', (req, res) => {
-      res.sendFile(HTML_FILE);
-    });
+    this.app.use(fallback(HTML_FILE, {DIST_DIR}));
     this.app.listen(this.port, () => {
       console.log('App listening on port: ' + this.port);
     });
