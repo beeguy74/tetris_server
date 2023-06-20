@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { takeGame, takeMode } from './whichGameSlice';
+import { takeGame, takeMode } from '../slices/whichGameSlice';
 
 import './HomePage.css';
-import classic from '../assets/classic.gif';
-import ninja from '../assets/ninja.jpg';
-import sumo from '../assets/sumo.jpg';
-import solo from '../assets/solo.png';
-import multyplayer from '../assets/multyplayer.png';
+import classic from '../../assets/classic.gif';
+import ninja from '../../assets/ninja.jpg';
+import sumo from '../../assets/sumo.jpg';
+import solo from '../../assets/solo.png';
+import multyplayer from '../../assets/multyplayer.png';
 
 
 const HomePage = () => {

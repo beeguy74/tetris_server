@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { openForm } from "./loginFormSlice";
+import { openForm } from "../slices/loginFormSlice";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
-import { inputLogin } from "./inputLoginSlice";
+import { inputLogin } from "../slices/inputLoginSlice";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
