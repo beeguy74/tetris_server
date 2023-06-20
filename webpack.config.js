@@ -1,10 +1,10 @@
-const path = require("path");
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ESLintWebpackPlugin = require("eslint-webpack-plugin");
+const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, "client/src", "main.jsx"),
+  entry: path.join(__dirname, 'client/src', 'main.jsx'),
   watch: true,
   module: {
     rules: [
@@ -13,7 +13,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        },
+        }
       },
       {
         test: /\.css$/i,
@@ -39,7 +39,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '/'
   },
   devtool: 'inline-source-map',
   plugins: [
