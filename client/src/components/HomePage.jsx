@@ -5,6 +5,9 @@ import './HomePage.css';
 import classic from '../assets/classic.gif';
 import ninja from '../assets/ninja.jpg';
 import sumo from '../assets/sumo.jpg';
+import solo from '../assets/solo.png';
+import multyplayer from '../assets/multyplayer.png';
+
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -16,41 +19,45 @@ const HomePage = () => {
       <div className="game-choise">
         {game === '' ? (
           <>
-            <div
-              className="game-option"
-              style={{ backgroundImage: `url(${classic})` }}
-              onClick={() => dispatch(takeGame('classic'))}
-            >
-              <p style={{ color: 'red' }}>Classic mode</p>
+            <div className="div-with-background">
+              <div
+                className="game-option"
+                style={{ backgroundImage: `url(${classic})` }}
+                onClick={() => dispatch(takeGame('classic'))}
+              >
+                <p className="game-option-text">Classic mode</p>
+              </div>
             </div>
             <div
               className="game-option"
               style={{ backgroundImage: `url(${ninja})` }}
               onClick={() => dispatch(takeGame('ninja'))}
             >
-              <p style={{ color: 'red' }}>Ninja mode</p>
+              <p className="game-option-text">Ninja mode</p>
             </div>
             <div
               className="game-option"
               style={{ backgroundImage: `url(${sumo})` }}
               onClick={() => dispatch(takeGame('sumo'))}
             >
-              <p style={{ color: 'red' }}>Sumo mode</p>
+              <p className="game-option-text">Sumo mode</p>
             </div>{' '}
           </>
         ) : (
           <>
             <div
               className="game-option"
+              style={{ backgroundImage: `url(${multyplayer})` }}
               onClick={() => dispatch(takeMode('multy'))}
             >
-              <p style={{ color: 'red' }}>Multyplayer mode</p>
+              <p className="game-option-text">Multyplayer mode</p>
             </div>
             <div
               className="game-option"
+              style={{ backgroundImage: `url(${solo})` }}
               onClick={() => dispatch(takeMode('solo'))}
             >
-              <p style={{ color: 'red' }}>Solo mode</p>
+              <p className="game-option-text">Solo mode</p>
             </div>
           </>
         )}

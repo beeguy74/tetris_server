@@ -1,13 +1,10 @@
 .dashboard {
-  margin-top: 10vh;
+  margin-top: 13vh;
   flex-grow: 12;
   width: 80vw;
   height: 86vh;
-  /* border: solid; */
   display: flex;
   justify-content: center;
-  /* background-color: rgb(250, 234, 214, 0.5); */
-  /* opacity: 0.4; */
   border-radius: 16px;
   flex-direction: column;
   align-content: space-between;
@@ -18,7 +15,7 @@
   height: 43vh;
   border-radius: 16px 16px 4px 4px;
   /* border: solid; */
-  background-color: rgb(237, 234, 214, 0.5);
+  background-color: #70a6c880;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +26,7 @@
   width: 80vw;
   height: 43vh;
   border-radius: 4px 4px 16px 16px;
-  background-color: rgb(237, 234, 214, 0.5);
+  background-color: #70a6c880;
   display: flex;
   justify-content: space-around;
   align-items: space-between;
@@ -55,11 +52,47 @@
   height: 30vh;
   margin-top: 5vh;
   margin-left: 10px;
-  background-repeat: no-repeat;
-  background-origin: border-box;
   background-size: cover;
   background-position: center;
+  position: relative;
   border-radius: 16px;
-  cursor : pointer;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Добавлено для плавного перехода */
 }
 
+.game-option:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(42, 128, 139, 0.5);
+  opacity: 0;
+  border-radius: 15px;
+
+}
+.game-option:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: url(icon-path); */
+  opacity: 0;
+  border-radius: 16px;
+
+}
+
+.game-option:hover:before,
+.game-option:hover:after {
+  opacity: 1;
+}
+
+.game-option-text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color:rgb(255, 255, 255);
+}

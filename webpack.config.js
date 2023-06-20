@@ -1,9 +1,9 @@
-const path = require("path");
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, "client/src", "main.jsx"),
+  entry: path.join(__dirname, 'client/src', 'main.jsx'),
   watch: true,
   module: {
     rules: [
@@ -11,15 +11,15 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(gif|jpg|jpeg)$/,
+        test: /\.(gif|jpg|jpeg|png)$/,
         use: [
           {
             loader: 'file-loader',
@@ -30,22 +30,22 @@ module.exports = {
           },
         ],
       },
-    ]
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
   output: {
-    path: path.join(__dirname, "build"),
-    filename: "bundle.js",
-    publicPath: "/"
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/',
   },
   devtool: 'inline-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '/client/index.html')
-    })
+      template: path.join(__dirname, '/client/index.html'),
+    }),
   ],
   // devServer: {
   //     hot: true,
