@@ -1,0 +1,11 @@
+.logo-font {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  overflow-wrap: break-word;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
