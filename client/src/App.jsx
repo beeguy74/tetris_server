@@ -3,8 +3,15 @@ import StartPage from "./components/StartPage/StartPage";
 import HomePage from "./components/HomePage/HomePage";
 import MainLayout from "./layouts/MainLayout";
 import LoginForm from "./components/LoginForm/LoginForm";
+import useSocket from "./hooks/useSocket";
 
 const App = () => {
+  
+  const [isConnected, events] = useSocket();
+  console.log(isConnected);
+  console.log(events);
+
+
   return (
     <BrowserRouter>
       <Routes>
