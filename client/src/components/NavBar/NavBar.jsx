@@ -1,9 +1,9 @@
 // import { ReactComponent as Brand } from '../assets/logo.svg'
-import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { openForm } from './loginFormSlice';
-import './NavBar.css';
-import Logo from './Logo';
+import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openForm } from "../slices/loginFormSlice";
+import "./NavBar.css";
+import Logo from "./Logo/Logo";
 
 const NavBar = () => {
   // const loginForm = useSelector((state) => state.loginForm.isOpen);
@@ -14,7 +14,7 @@ const NavBar = () => {
       <div className="container">
         <div className="nav-elements">
           <ul>
-            <div className='nav-elements-main'>
+            <div className="nav-elements-main">
               <li>
                 <Logo />
               </li>

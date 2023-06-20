@@ -1,4 +1,4 @@
-import ButtonStart from "./ButtonStart";
+import ButtonStart from "./ButtonStart/ButtonStart";
 
 
 const StartPage = () => {
