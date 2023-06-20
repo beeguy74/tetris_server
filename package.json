@@ -6,7 +6,6 @@
   "scripts": {
     "start-dev": "webpack-dev-server --open",
     "start": "nodemon ./server/main.js",
-    "__dev": "webpack --mode development --watch && nodemon server/main.js",
     "dev": "concurrently \"npx webpack --mode development --watch\" \"nodemon server/main.js\"",
     "build": "webpack",
     "test": "echo \"Error: no test specified\""
@@ -42,10 +41,11 @@
     "concurrently": "^8.2.0",
     "css-loader": "^6.8.1",
     "debug": "^4.3.4",
-    "eslint": "^8.38.0",
+    "eslint": "^8.43.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint-webpack-plugin": "^4.0.1",
     "file-loader": "^6.2.0",
     "fs": "^0.0.1-security",
     "html-webpack-plugin": "^5.5.3",
