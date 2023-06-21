@@ -1,5 +1,5 @@
-const Server = require("./app/Server");
-const SocketServer = require("./app/SocketServer");
+const Server = require("./framework/Server");
+const SocketServer = require("./framework/SocketServer");
 const path = require("path");
 
 const port = process.env.PORT || "3000";

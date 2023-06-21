@@ -1,3 +1,5 @@
+const userController = require("../app/controllers/user");
+
 class SocketServer {
   constructor(expressApp) {
     const http = require("http");
@@ -10,9 +12,7 @@ class SocketServer {
     });
     this.name = "SocketServer";
     this.socketRoutes = new Map();
-    this.socketRoutes.set('login', (data) => {
-        console.log(`name: ${data}`);
-    })
+    this.socketRoutes.set('login', loginController.login)
   };
 
   start() {
