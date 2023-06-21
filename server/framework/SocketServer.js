@@ -1,4 +1,5 @@
-const userController = require("../app/controllers/user");
+const Router = require('./Router');
+
 
 class SocketServer {
   constructor(expressApp) {
@@ -12,8 +13,15 @@ class SocketServer {
     });
     this.name = "SocketServer";
     this.socketRoutes = new Map();
-    this.socketRoutes.set('login', loginController.login)
   };
+
+  use(router) {
+    this.socketRoutes = new Map([...this.socketRoutes, ...router.routes]);
+  }
+
+  Router() {
+    return new Router;
+  }
 
   start() {
     this.io.listen(3001);

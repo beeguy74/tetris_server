@@ -1,3 +1,5 @@
+const userRouter = require('./app/routers/user');
+
 const Server = require("./framework/Server");
 const SocketServer = require("./framework/SocketServer");
 const path = require("path");
@@ -11,6 +13,9 @@ const DIST_DIR = path.join(__dirname, "../build");
 const HTML_FILE = path.join(DIST_DIR, "index.html");
 
 const myIo = new SocketServer(myApp.app);
+
+myIo.use(userRouter);
+
 myIo.start();
 
 
