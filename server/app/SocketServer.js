@@ -8,7 +8,12 @@ class SocketServer {
         origin: "http://0.0.0.0:3000",
       },
     });
-  }
+    this.name = "SocketServer";
+    this.socketRoutes = new Map();
+    this.socketRoutes.set('login', (data) => {
+        console.log(`name: ${data}`);
+    })
+  };
 
   start() {
     this.io.listen(3001);
@@ -19,10 +24,9 @@ class SocketServer {
       socket.onAny((event, ...args) => {
         console.log(event, args);
       });
-
-      socket.on("login", (data) => {
-        console.log(`name: ${data}`);
-      });
+      this.socketRoutes.forEach((cb, key, map) => {
+        socket.on(key, cb);
+      })
     });
     this.io.on("disconnection", (socket) => {
       console.log("user disconnected");
