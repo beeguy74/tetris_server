@@ -28,7 +28,7 @@ const LoginForm = () => {
             type="submit"
             onClick={() => {
               // dispatch(openHomePage(true));
-              debugger;
+              // debugger;
               dispatch(sendLogin());
               navigate("/home");
             }}

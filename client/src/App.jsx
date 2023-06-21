@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 import MainLayout from "./layouts/MainLayout";
 import LoginForm from "./components/LoginForm/LoginForm";
 import useSocket from "./hooks/useSocket";
+import SoloGame from "./components/SoloGame/SoloGame";
 
 const App = () => {
   
@@ -19,6 +20,7 @@ const App = () => {
           <Route index element={<StartPage />} />
           <Route path="login" element={<LoginForm />} />
           <Route path="home" element={<HomePage />} />
+          <Route path="solo" element={<SoloGame/>} />
         </Route>
       </Routes>
     </BrowserRouter>

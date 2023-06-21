@@ -14,7 +14,7 @@ export const inputLoginSlice = createSlice({
     },
     sendLogin: (state) => {
       const name = state.input;
-      debugger;
+      // debugger;
       state.input = "";
       socket.emit("login", name);
     },
