@@ -1,4 +1,4 @@
-const userRouter = require('./app/routers/user');
+const userRouter = require('./app/routers/userRouter');
 
 const Server = require("./framework/Server");
 const SocketServer = require("./framework/SocketServer");

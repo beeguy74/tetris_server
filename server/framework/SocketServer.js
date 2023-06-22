@@ -19,7 +19,7 @@ class SocketServer {
     this.socketRoutes = new Map([...this.socketRoutes, ...router.routes]);
   }
 
-  Router() {
+  static Router() {
     return new Router;
   }
 
