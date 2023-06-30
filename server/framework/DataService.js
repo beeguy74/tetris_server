@@ -5,19 +5,22 @@ class DataService {
     this.data = new Map();
   };
 
-  add(key, value){
-    this.data.set(key, value);
+  add(type, key, value){
+    this.data.set(type, new Map([[key, value]]));
   };
 
-  getByKey(key){
-    return this.data.get(key);
+  getByKey(type, key){
+    return this.data.get(type)?.get(key);
   };
 
-  getByValue(searchValue){
-    for (let [key, value] of this.data.entries()) {
-      if (value === searchValue)
-        return key;
-    };
+  getByValue(type, searchValue){
+    const data = this.data.get(type);
+    if (data) {
+      for (let [key, value] of data.entries()) {
+        if (value === searchValue)
+          return key;
+      };
+    }
     return null;
   };
 }
