@@ -1,4 +1,5 @@
 const userRouter = require('./app/routers/userRouter');
+const roomRouter = require('./app/routers/roomRouter');
 const DataService = require('./framework/DataService');
 
 const Server = require("./framework/Server");
@@ -16,6 +17,7 @@ const HTML_FILE = path.join(DIST_DIR, "index.html");
 const myIo = new SocketServer(myApp.app, DataService);
 
 myIo.use(userRouter);
+myIo.use(roomRouter);
 
 myIo.start();
 

@@ -35,7 +35,7 @@ class SocketServer {
       });
 
       this.socketRoutes.forEach((cb, key, map) => {
-        socket.on(key, cb.bind({dataService: this.dataService, socket}));
+        socket.on(key, cb.bind({dataService: this.dataService, socket, io: this.io}));
       });
 
     });
