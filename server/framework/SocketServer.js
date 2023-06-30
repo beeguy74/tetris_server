@@ -2,7 +2,7 @@ const Router = require('./Router');
 
 
 class SocketServer {
-  constructor(expressApp) {
+  constructor(expressApp, dataService) {
     const http = require("http");
     const server = http.createServer(expressApp);
     const { Server } = require("socket.io");
@@ -13,6 +13,7 @@ class SocketServer {
     });
     this.name = "SocketServer";
     this.socketRoutes = new Map();
+    this.dataService = new dataService;
   };
 
   use(router) {
@@ -30,11 +31,13 @@ class SocketServer {
       console.log("user connected");
 
       socket.onAny((event, ...args) => {
-        console.log(event, args);
+        console.log('EVENT: ', event, args);
       });
+
       this.socketRoutes.forEach((cb, key, map) => {
-        socket.on(key, cb);
-      })
+        socket.on(key, cb.bind({dataService: this.dataService, socket}));
+      });
+
     });
     this.io.on("disconnection", (socket) => {
       console.log("user disconnected");

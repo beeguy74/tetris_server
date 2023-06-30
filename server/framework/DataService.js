@@ -1,4 +1,4 @@
-class DataController {
+class DataService {
 
   constructor(params) {
     this.params = params;
@@ -21,3 +21,5 @@ class DataController {
     return null;
   };
 }
+
+module.exports = DataService;
