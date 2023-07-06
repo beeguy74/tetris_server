@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { openForm } from "../slices/loginFormSlice";
+// import { openForm } from "../slices/loginFormSlice";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
-import { inputLogin } from "../slices/inputLoginSlice";
+import { inputLogin, sendLogin } from "../slices/inputLoginSlice";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -28,7 +28,8 @@ const LoginForm = () => {
             type="submit"
             onClick={() => {
               // dispatch(openHomePage(true));
-              dispatch(openForm(false));
+              // debugger;
+              dispatch(sendLogin());
               navigate("/home");
             }}
             value="Submit"
