@@ -5,7 +5,7 @@ class SocketServer {
     const { Server } = require("socket.io");
     this.io = new Server(server, {
       cors: {
-        origin: "http://localhost:3000",
+        origin: ["http://localhost:3000", "http://0.0.0.0:3000"],
       },
     });
   }
