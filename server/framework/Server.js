@@ -12,10 +12,6 @@ class Server {
   };
 
   start(DIST_DIR, HTML_FILE) {
-    const mockResponse = {
-      foo: 'bar',
-      bar: 'foo'
-    };
     this.app.use(express.static(DIST_DIR));
     this.app.use(fallback(HTML_FILE, {DIST_DIR}));
     this.app.listen(this.port, () => {
